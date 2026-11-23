@@ -1,0 +1,634 @@
+:root {
+  --Navy-850: hsl(217, 28%, 15%);
+  /*介绍与邮件订阅背景*/
+  --Navy-900: hsl(218, 28%, 13%);
+  /*主要背景*/
+  --Navy-950: hsl(216, 53%, 9%);
+  /*页脚背景*/
+  --Navy-800: hsl(219, 30%, 18%);
+  /*客户评价背景*/
+  --Teal-200: hsl(176, 68%, 64%);
+
+  --Cyan-500: hsl(198, 60%, 50%);
+
+  --Red-500: hsl(0, 100%, 63%);
+
+  --White: hsl(0, 0%, 100%);
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url(./fonts/Raleway-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url(./fonts/Raleway-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url(./fonts/OpenSans_SemiCondensed-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url(./fonts/OpenSans_SemiCondensed-Bold.ttf);
+  font-weight: 700;
+}
+
+body {
+  font-size: 14px;
+  background-color: var(--Navy-900);
+  color: var(--White);
+  font-family: "Open Sans";
+  line-height: 1.6;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+.nav,
+.logo img {
+  font-family: "Raleway", sans-serif;
+}
+
+header {
+  background-color: var(--Navy-850);
+  background-image: url(./images/bg-curvy-desktop.svg);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  padding: 66px 72px;
+}
+
+header .nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .nav .logo img {
+  width: 180px;
+  height: auto;
+  display: block;
+}
+
+header .nav .txt ul {
+  display: flex;
+  gap: 53px;
+}
+
+header .nav .txt ul li a {
+  color: var(--White);
+  font-weight: 400;
+}
+
+header .matter1 {
+  padding-top: 90px;
+  text-align: center;
+  gap: 55px;
+}
+
+header .matter1 img {
+  margin-bottom: 55px;
+}
+
+header .matter1 h1 {
+  max-width: 680px;
+  margin-inline: auto;
+  text-align: center;
+  line-height: 1.3;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+header .matter1 p {
+  max-width: 590px;
+  margin-inline: auto;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2.2;
+}
+
+header .matter1 .bottom {
+  margin-top: 30px;
+  display: inline-block;
+  padding: 20px 95px;
+  color: #fff;
+  background-image: linear-gradient(to right, var(--Teal-200), var(--Cyan-500));
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: "Raleway";
+  border: none;
+  transition: all 2s ease;
+}
+
+header .matter1 .bottom a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+header .matter1 .bottom:hover {
+  filter: brightness(1.2);
+}
+
+.matter2 {
+  margin-top: -1px;
+  background-color: var(--Navy-900);
+}
+
+.matter2 ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-inline: auto;
+  gap: 140px 85px;
+  text-align: center;
+  max-width: 890px;
+}
+
+.matter2 ul li img {
+  width: auto;
+  height: 86px;
+}
+
+.matter2 ul li h3 {
+  margin-top: 27px;
+  font-weight: 700;
+}
+
+.matter2 ul li p {
+  font-weight: 400;
+  margin-top: 10px;
+  line-height: 1.7;
+  opacity: 0.7;
+}
+
+.matter3 {
+  padding-left: 103px;
+  margin-top: 130px;
+  background-color: var(--Navy-900);
+  display: flex;
+  gap: 50px;
+}
+
+.matter3 .txt {
+  padding-top: 95px;
+}
+
+.matter3 .txt h1 {
+  max-width: 342px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 24px;
+}
+
+.matter3 .txt p {
+  max-width: 549px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+.matter3 .txt a {
+  color: var(--Teal-200);
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+.matter3 .txt img {
+  margin-left: 3px;
+  text-align: center;
+  transform: translateY(5px);
+}
+
+.matter4 {
+  padding: 136px 24px 0;
+  max-width: 1150px;
+  margin-inline: auto;
+}
+
+.matter4 ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 0;
+}
+
+.matter4 ul li {
+  background-color: var(--Navy-800);
+  padding: 40px 21px 32px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .25);
+}
+
+.matter4 ul li p {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.matter4 .bottom {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+}
+
+.matter4 .bottom img {
+  display: block;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.matter4 .bottom .txt {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.matter4 .bottom .txt .name {
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.matter4 .bottom .txt .role {
+  font-size: 10px;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.matter4 ul li:first-child {
+  position: relative;
+
+}
+
+.matter4 ul li:first-child::before {
+  content: "";
+  position: absolute;
+  top: -34px;
+  left: -12px;
+  width: 56px;
+  height: 44px;
+  background: url(./images/bg-quotes.png) no-repeat center / contain;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.matter5 {
+  position: relative;
+  z-index: 2;
+  margin-top: 190px;
+  margin-inline: auto;
+  max-width: 866px;
+  padding: 46px 75px 37px;
+  background-color: var(--Navy-850);
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: -116px;
+}
+
+.matter5 .txt h1 {
+  text-align: center;
+  line-height: 1.3;
+  font-weight: 700;
+  margin-bottom: 23px;
+}
+
+.matter5 .txt p {
+  text-align: center;
+  line-height: 1.6;
+  font-weight: 400;
+  opacity: 0.8;
+  max-width: 620px;
+  margin-bottom: 34px;
+}
+
+.matter5 .button {
+  display: flex;
+  max-width: 710px;
+  margin-inline: auto;
+  gap: 30px;
+}
+
+.matter5 .button .left {
+  flex: 1;
+}
+
+.matter5 .button .left input {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 35px;
+  border-radius: 999px;
+  border: none;
+  font-size: 14px;
+}
+
+.matter5 .button .left input::placeholder {
+  opacity: 0.5;
+}
+
+
+
+
+.matter5 .button .right button {
+  padding: 16px 29px;
+  background-image: linear-gradient(to right, var(--Teal-200), var(--Cyan-500));
+  border-radius: 999px;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  align-items: center;
+}
+
+.matter6 {
+  position: relative;
+  z-index: 1;
+  background-color: var(--Navy-950);
+  padding-top: 189px;
+  padding-bottom: 90px;
+
+
+}
+
+
+.matter6 .logo .pic {
+  width: 180px;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.matter6 .inner .logo {
+  margin-right: 40px;
+}
+
+.matter6 .inner {
+  max-width: 1110px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1fr 1fr auto;
+  gap: 40px;
+  align-items: start;
+}
+
+.matter6 .inner .txt {
+  display: flex;
+}
+
+.matter6 .inner .txt img {
+  display: block;
+  width: 10px;
+  height: 15px;
+  margin-right: 10px;
+  align-self: center;
+}
+
+.matter6 .inner .txt p {
+  max-width: 324px;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+
+.matter6 .phone p {
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.matter6 .phone .top {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.matter6 .phone .top img {
+  display: block;
+  width: 15px;
+  height: 15px;
+}
+
+.matter6 .phone .bottom {
+  display: flex;
+  gap: 20px;
+}
+
+.matter6 .phone .bottom img {
+  display: block;
+  width: 15px;
+  height: 15px;
+}
+
+.matter6 .phone,
+.matter6 .nav,
+.matter6 .icon {
+  align-self: start;
+  /* 三列都从顶部开始 */
+  margin-top: 80px;
+  /* 统一往下 40px */
+  padding-top: 0;
+  /* 清掉原来的 padding */
+}
+
+.matter6 .nav a {
+  margin-bottom: 15px;
+  display: block;
+  color: #fff;
+  opacity: 0.7;
+}
+
+.matter6 .icon {
+  display: flex;
+  gap: 10px;
+}
+
+.matter6 .icon img {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width:768px) {
+  header {
+    background-image: url(./images/bg-curvy-mobile.svg);
+    background-size: 100% auto;
+    padding: 40px 24px 80px;
+  }
+
+  header .nav {
+    gap: 16px;
+  }
+
+  header .nav .txt ul {
+    gap: 24px;
+    /* 桌面 53 → 手机 24 */
+  }
+
+  header .matter1 {
+    padding-top: 60px;
+  }
+
+  header .matter1 img {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  header .matter1 h1 {
+    font-size: 26px;
+    max-width: 340px;
+  }
+
+  header .matter1 p {
+    font-size: 14px;
+    max-width: 340px;
+    line-height: 1.7;
+  }
+
+  .matter2 ul {
+    grid-template-columns: 1fr;
+    gap: 56px;
+    max-width: 100%;
+  }
+
+  .matter2 ul li img {
+    height: 60px;
+  }
+
+  .matter3 {
+    flex-direction: column;
+    padding: 60px 24px;
+    margin-top: 60px;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .matter3 .txt {
+    padding-top: 0;
+  }
+
+  .matter3 .txt h1 {
+    font-size: 26px;
+    max-width: 100%;
+  }
+
+  .matter3 .txt p {
+    max-width: 100%;
+  }
+
+  .matter3 .pic img {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .matter4 {
+    padding: 80px 24px 0;
+  }
+
+  .matter4 ul {
+    grid-template-columns: 1fr;
+  }
+
+  .matter4 ul li {
+    padding: 28px 20px 24px;
+  }
+
+  .matter4 ul li:first-child::before {
+    width: 40px;
+    height: 32px;
+    top: -22px;
+    left: -6px;
+  }
+
+  /* ========== CTA 卡片 ========== */
+  .matter5 {
+    margin: 80px 24px 0;
+    max-width: 100%;
+    padding: 32px 24px;
+  }
+
+  .matter5 .txt h1 {
+    font-size: 24px;
+  }
+
+  .matter5 .button {
+    flex-direction: column;
+    /* 输入框和按钮竖排 */
+    gap: 16px;
+    max-width: 100%;
+  }
+
+  .matter5 .button .right button {
+    width: 100%;
+    transform: none;
+    /* 去掉桌面那个 translateY */
+  }
+
+
+  .matter6 {
+    padding: 80px 24px 60px;
+    /* 189 → 80（卡片探下来的空间） */
+  }
+
+  .matter6 .inner {
+    grid-template-columns: 1fr;
+    /* 五列 → 一列 */
+    gap: 40px;
+    text-align: center;
+  }
+
+  .matter6 .inner .logo {
+    align-items: center;
+  }
+
+  .matter6 .inner .txt {
+    justify-content: left;
+    text-align: left;
+  }
+
+  .matter6 .phone .top,
+  .matter6 .phone .bottom {
+    justify-content: left;
+    margin-top: 0;
+  }
+
+  .matter6 .nav {
+    margin-top: 0;
+    text-align: left;
+  }
+
+  .matter6 .icon {
+    justify-content: center;
+    margin-top: 0;
+  }
+}
